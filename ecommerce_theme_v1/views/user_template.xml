@@ -1,0 +1,56 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- User Profile Template -->
+        <record id="user_profile_template" model="ir.ui.view">
+            <field name="name">user.profile.template</field>
+            <field name="model">user.profile</field>
+            <field name="arch" type="xml">
+                <t t-name="ecommerce_theme_v1.user_profile">
+                    <div class="user-profile">
+                        <h2><t t-esc="user_info.username"/></h2>
+                        <p>Email: <t t-esc="user_info.email"/></p>
+                        <p>Orders: <t t-esc="user_info.orders"/></p>
+                    </div>
+                </t>
+            </field>
+        </record>
+
+        <!-- User Login Template -->
+        <record id="user_login_template" model="ir.ui.view">
+            <field name="name">user.login.template</field>
+            <field name="model">user.login</field>
+            <field name="arch" type="xml">
+                <t t-name="ecommerce_theme_v1.user_login">
+                    <div class="login-form">
+                        <form t-attf-action="/login" method="post">
+                            <input type="text" name="username" placeholder="Username" required="required"/>
+                            <input type="password" name="password" placeholder="Password" required="required"/>
+                            <button type="submit">Login</button>
+                        </form>
+                    </div>
+                </t>
+            </field>
+        </record>
+
+        <!-- User Signup Template -->
+        <record id="user_signup_template" model="ir.ui.view">
+            <field name="name">user.signup.template</field>
+            <field name="model">user.signup</field>
+            <field name="arch" type="xml">
+                <t t-name="ecommerce_theme_v1.user_signup">
+                    <div class="signup-form">
+                        <form t-attf-action="/signup" method="post">
+                            <input type="text" name="username" placeholder="Username" required="required"/>
+                            <input type="email" name="email" placeholder="Email" required="required"/>
+                            <input type="password" name="password" placeholder="Password" required="required"/>
+                            <button type="submit">Signup</button>
+                        </form>
+                    </div>
+                </t>
+            </field>
+        </record>
+    </data>
+</odoo>
+```

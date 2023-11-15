@@ -1,0 +1,20 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Sample user data -->
+        <record id="user_1" model="res.users">
+            <field name="name">John Doe</field>
+            <field name="login">johndoe</field>
+            <field name="password">johndoe123</field>
+            <field name="email">johndoe@example.com</field>
+        </record>
+        <record id="user_2" model="res.users">
+            <field name="name">Jane Doe</field>
+            <field name="login">janedoe</field>
+            <field name="password">janedoe123</field>
+            <field name="email">janedoe@example.com</field>
+        </record>
+    </data>
+</odoo>
+```

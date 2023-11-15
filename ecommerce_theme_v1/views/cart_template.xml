@@ -1,0 +1,45 @@
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="cart_template" name="Cart">
+            <t t-call="ecommerce_theme_v1.layout">
+                <div id="wrap">
+                    <div class="container">
+                        <div class="oe_website_sale">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h2 class="mt16">Your Shopping Cart</h2>
+                                    <t t-foreach="cart_items" t-as="item">
+                                        <div class="cart-item">
+                                            <div class="product-name">
+                                                <t t-esc="item.product_id.name"/>
+                                            </div>
+                                            <div class="product-price">
+                                                <t t-esc="item.product_id.price"/>
+                                            </div>
+                                            <div class="product-quantity">
+                                                <t t-esc="item.quantity"/>
+                                            </div>
+                                            <div class="product-remove">
+                                                <a href="#" class="remove_from_cart" t-att-data-product-id="item.product_id.id">Remove</a>
+                                            </div>
+                                        </div>
+                                    </t>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="cart-total">
+                                        <h3>Total:</h3>
+                                        <p><t t-esc="total_price"/></p>
+                                        <a href="/checkout" class="btn btn-primary">Proceed to Checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>
+```

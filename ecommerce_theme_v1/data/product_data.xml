@@ -1,0 +1,32 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Product Data -->
+        <record id="product_1" model="product.product">
+            <field name="name">Gaming PC</field>
+            <field name="description">High performance gaming PC with latest graphics card and processor.</field>
+            <field name="price">1500</field>
+            <field name="image" type="base64" file="ecommerce_theme_v1/static/src/img/product_1.jpg"/>
+        </record>
+        <record id="product_2" model="product.product">
+            <field name="name">Gaming Laptop</field>
+            <field name="description">Portable gaming laptop with high refresh rate screen and powerful GPU.</field>
+            <field name="price">1200</field>
+            <field name="image" type="base64" file="ecommerce_theme_v1/static/src/img/product_2.jpg"/>
+        </record>
+        <record id="product_3" model="product.product">
+            <field name="name">PC Component</field>
+            <field name="description">High quality PC component for upgrading your gaming setup.</field>
+            <field name="price">200</field>
+            <field name="image" type="base64" file="ecommerce_theme_v1/static/src/img/product_3.jpg"/>
+        </record>
+        <record id="product_4" model="product.product">
+            <field name="name">Gaming Console</field>
+            <field name="description">Latest gaming console with 4K gaming and VR support.</field>
+            <field name="price">400</field>
+            <field name="image" type="base64" file="ecommerce_theme_v1/static/src/img/product_4.jpg"/>
+        </record>
+    </data>
+</odoo>
+```
