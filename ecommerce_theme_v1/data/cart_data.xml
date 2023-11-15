@@ -1,0 +1,26 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Sample cart data -->
+        <record id="cart1" model="ecommerce_theme_v1.cart">
+            <field name="id">1</field>
+            <field name="user_id">1</field>
+            <field name="product_id">1</field>
+            <field name="quantity">2</field>
+        </record>
+        <record id="cart2" model="ecommerce_theme_v1.cart">
+            <field name="id">2</field>
+            <field name="user_id">2</field>
+            <field name="product_id">3</field>
+            <field name="quantity">1</field>
+        </record>
+        <record id="cart3" model="ecommerce_theme_v1.cart">
+            <field name="id">3</field>
+            <field name="user_id">3</field>
+            <field name="product_id">2</field>
+            <field name="quantity">1</field>
+        </record>
+    </data>
+</odoo>
+```

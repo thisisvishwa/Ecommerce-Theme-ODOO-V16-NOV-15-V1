@@ -1,0 +1,22 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="review_template" name="Review Template">
+            <t t-foreach="review_list" t-as="review">
+                <div class="review-card">
+                    <div class="review-content">
+                        <t t-esc="review.content"/>
+                    </div>
+                    <div class="review-user">
+                        <t t-esc="review.user_id.username"/>
+                    </div>
+                    <div class="review-product">
+                        <t t-esc="review.product_id.name"/>
+                    </div>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>
+```

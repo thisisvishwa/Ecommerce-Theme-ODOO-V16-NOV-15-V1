@@ -1,0 +1,33 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ecommerce_theme_v1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "product_added"
+msgstr "Product added to cart"
+
+msgid "product_removed"
+msgstr "Product removed from cart"
+
+msgid "checkout_success"
+msgstr "Checkout successful"
+
+msgid "login_success"
+msgstr "Login successful"
+
+msgid "signup_success"
+msgstr "Signup successful"
+
+msgid "review_posted"
+msgstr "Review posted successfully"
+
+msgid "search_results"
+msgstr "Search results"

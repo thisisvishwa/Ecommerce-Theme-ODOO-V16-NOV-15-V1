@@ -1,0 +1,57 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Product Catalog -->
+        <record id="product_catalog_view" model="ir.ui.view">
+            <field name="name">product.catalog.view</field>
+            <field name="model">product.product</field>
+            <field name="arch" type="xml">
+                <t t-name="product_catalog">
+                    <div class="product-catalog">
+                        <t t-foreach="product_list" t-as="product">
+                            <div class="product-card">
+                                <img t-att-src="'/ecommerce_theme_v1/static/src/img/' + product.image" alt="Product Image"/>
+                                <div class="product-info">
+                                    <h3 t-esc="product.name"/>
+                                    <p t-esc="product.description"/>
+                                    <span class="price" t-esc="product.price"/>
+                                    <button class="add-to-cart" t-att-data-id="product.id">Add to Cart</button>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </t>
+            </field>
+        </record>
+
+        <!-- Product Detail -->
+        <record id="product_detail_view" model="ir.ui.view">
+            <field name="name">product.detail.view</field>
+            <field name="model">product.product</field>
+            <field name="arch" type="xml">
+                <t t-name="product_detail">
+                    <div class="product-detail">
+                        <img t-att-src="'/ecommerce_theme_v1/static/src/img/' + product.image" alt="Product Image"/>
+                        <div class="product-info">
+                            <h2 t-esc="product.name"/>
+                            <p t-esc="product.description"/>
+                            <span class="price" t-esc="product.price"/>
+                            <button class="add-to-cart" t-att-data-id="product.id">Add to Cart</button>
+                        </div>
+                        <div class="reviews">
+                            <h3>Customer Reviews</h3>
+                            <t t-foreach="review_list" t-as="review">
+                                <div class="review-card">
+                                    <h4 t-esc="review.user_id.username"/>
+                                    <p t-esc="review.content"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </t>
+            </field>
+        </record>
+    </data>
+</odoo>
+```

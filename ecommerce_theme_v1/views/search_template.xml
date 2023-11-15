@@ -1,0 +1,43 @@
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="search_template" name="Search">
+            <t t-call="ecommerce_theme_v1.layout">
+                <div id="wrap">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="page-header">
+                                    <h1>Search Results</h1>
+                                </div>
+                                <div id="search-bar">
+                                    <input type="text" name="search" placeholder="Search for products..." />
+                                    <button type="submit">Search</button>
+                                </div>
+                                <div id="search-results">
+                                    <t t-foreach="search_results" t-as="product">
+                                        <div class="search-result">
+                                            <a t-attf-href="/shop/product/{{product.id}}">
+                                                <div class="product-name">
+                                                    <t t-esc="product.name"/>
+                                                </div>
+                                                <div class="product-description">
+                                                    <t t-esc="product.description"/>
+                                                </div>
+                                                <div class="product-price">
+                                                    <t t-esc="product.price"/>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </t>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>
+```
